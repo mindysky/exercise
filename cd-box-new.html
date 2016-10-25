@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0;}
+        body{background: url('bg.jpg')no-repeat; background-size:100%;overflow: hidden;}
+        ul,li{list-style: none;padding:0;margin:0;}
+        ul{
+            width: 880px;
+            height: 200px;
+        position: absolute;
+        margin:170px auto;}
+        ul li{
+            width: 200px;
+            height: 200px;
+            float:left;
+            margin-left:20px;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transform: perspective(800px);
+        }
+        li i{
+            width: 200px;
+            height: 200px;
+            background: url('1.jpg')no-repeat;
+            position: absolute;
+            -webkit-transform: translateZ(1px);
+        }
+        li span{
+            width: 200px;
+            height: 200px;
+            background: url('cd.png')no-repeat;
+            background-size: 100%;
+            position: absolute;
+            -webkit-transform: translateZ(-1px);
+        }
+        li:hover span{
+            -webkit-transition: 1s all ease;
+            -webkit-transform: perspective(800px);
+            -webkit-transform: translateZ(-3px) translate(0,-37px) rotate(180deg);
+
+        }
+        li:hover i{
+            -webkit-transition: 1s all ease;
+            -webkit-transform: perspective(800px) translate(0,35px);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><i></i><span></span></li>
+    <li><i></i><span></span></li>
+    <li><i></i><span></span></li>
+    <li><i></i><span></span></li>
+</ul>
+</body>
+</html>
