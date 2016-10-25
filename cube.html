@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            -webkit-transform-style: preserve-3d;
+            font-size: 30px;
+            text-align: center;
+            line-height:200px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin:50px auto;
+            -webkit-transition: 10s all ease;
+            -webkit-transform:perspective(800px) rotateY(0deg) rotateX(0deg);
+
+        }
+        .box div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .front {
+            background: rgba(0, 255, 0, 0.4);
+            -webkit-transform: translateZ(100px);
+        }
+        .back {
+            background: rgba(255, 255, 0, 0.4);
+            -webkit-transform: translateZ(-100px);
+        }
+        .left {
+            background: rgba(0, 255, 255, 0.4);
+            -webkit-transform: translate(-100px,0) rotateY(-90deg);
+        }
+        .right {
+            background: rgba(255, 0, 0, 0.4);
+            -webkit-transform: translate(100px,0) rotateY(90deg);
+        }
+        .up {
+            background: rgba(255, 0, 255, 0.4);
+            -webkit-transform: translate(0,-100px) rotateX(90deg);
+        }
+        .down {
+            background: rgba(0, 0, 255, 0.4);
+            -webkit-transform: translate(0,100px) rotateX(-90deg);
+        }
+        .box:active{
+            -webkit-transform: perspective(800px) rotateY(360deg) rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="front">front</div>
+    <div class="back">back</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="up">up</div>
+    <div class="down">down</div>
+</div>
+</body>
+</html>
